@@ -5,36 +5,148 @@ body{
         #FFE5B4 20%,
         rgb(245, 159, 174) 100%,
         rgb(253, 208, 250) 10%
-     );
-    
+     ); 
 }
+
 .main{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    position: relative;
     
-    
-    
+}
+.main-title{
+    align-self: center;
 }
 .main-form{
     box-sizing: border-box;
     width: 100%;
-    max-width: 700px;
-    height: 650px;
+    max-width: 600px;
+    min-height: 200px;
     padding: 40px;
-    background-color: aliceblue;
-    border-radius: 5px;
+    background-color: #fda19d;
+    color: white;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    font-family: sans-serif;
-    font-size: 18px;
+    align-items: flex-start;
+    position: relative;
+    top: 10px;
+    font-size: 19px;
+    font-weight: 500;
 }
 img{
     width: 100%;
-    width: 603px;
-    margin-left: 300px;
+    max-width: 603px;
+    min-height: 200px;
     border-radius: 10px;
     opacity: 0.8;
+    
+}
+label{
+    font-family: 'Gowun Batang', serif;;   
+    font-size: 20px;
+}
+.input-field, .textarea, .select{
+    font-family: sans-serif;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-right:2px;
+    margin: 0;
+    background-color: rgb(246, 235, 247);
+    
+}
+.input-field:focus, .textarea:focus, .select:focus, .checkbox-custom:focus, button:focus{
+    background: aliceblue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0 #e3423d;
+    
+}
+.textarea{
+    resize: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+.select{
+    cursor: pointer;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.input-field:hover, .textarea:hover, select:hover{
+    background-color: rgb(248, 224, 238);
+}
+.checkbox-wrap{
+    position: relative;
+}
+.check-text{
+    margin-left: 27px;
+}
+.checkbox-label input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkbox-label .checkbox-custom{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    background-color: #f1625d;
+    border-radius: 5px;
+    border: 2px solid peachpuff;
+}
+.checkbox-label .checkbox-custom::after{
+    position: absolute;
+    content: "";
+    left: 12px;
+    top: 12px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid #FFE5B4;
+    border-width: 0 3px 3px 0;
+    transform: rotate(0deg)scale(0deg);
+    opacity: 1;
+}
+.checkbox-label input:checked~ .checkbox-custom{
+    background-color: white;
+    border-radius: 5px;
+    transform: rotate(0deg)scale(0deg);
+    opacity: 1;
+    border: 2px solid white;
+}
+.checkbox-label input:checked ~ .checkbox-custom::after{
+    transform: rotate(45deg)scale(1);
+    opacity: 1;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #ec6762;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+button{
+   background-color:#ec6762;
+   border-radius: 10px;
+   border-color: peachpuff;
+   padding: 15px;
+   font-family: sans-serif;
+   color: white;
+   
+}
+button:hover{
+   background-color: #e93731; 
+   color: whitesmoke;
+}
+button:disabled{
+    background-color: #FFE5B4;
+    color: #f1625d;
+    opacity: 0.5;
 }
