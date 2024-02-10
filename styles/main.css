@@ -26,6 +26,7 @@ body{
     min-height: 200px;
     padding: 40px;
     background-color: #fda19d;
+    box-shadow: 4px 2px 5px rgb(233, 104, 111);
     color: white;
     border-radius: 20px;
     display: flex;
@@ -42,6 +43,7 @@ img{
     min-height: 200px;
     border-radius: 10px;
     opacity: 0.8;
+    border: solid #f59f9c;
     
 }
 label{
@@ -52,6 +54,7 @@ label{
     font-family: sans-serif;
     font-size: 16px;
     border: none;
+    border-radius: 5px;
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
@@ -64,8 +67,8 @@ label{
     background: aliceblue;
     border-radius: 5px;
     box-shadow: 2px 2px 5px 0 #e3423d;
-    
 }
+
 .textarea{
     resize: none;
     border-radius: 10px;
@@ -144,9 +147,4 @@ button{
 button:hover{
    background-color: #e93731; 
    color: whitesmoke;
-}
-button:disabled{
-    background-color: #FFE5B4;
-    color: #f1625d;
-    opacity: 0.5;
 }
